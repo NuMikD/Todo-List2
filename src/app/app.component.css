@@ -1,0 +1,42 @@
+form {
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.rounded {
+    border-style: solid;
+    border-radius: 7px;
+    border-color: darkgray;
+    border-width: 1px;
+}
+
+.pink {
+    color: deeppink;
+    border: 1px solid deeppink;
+    background-color: white;
+}
+
+.padded {
+    padding: 2%;
+}
+
+.widths {
+    width: 100%;
+}
+
+.flexing {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: black;
+}
