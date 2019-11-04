@@ -19,6 +19,7 @@ export class AppComponent {
   completed: boolean=false;
   delete: null;
 
+  isMarginTB: boolean = true;
   isRounded: boolean = true;
   isPink: boolean = true; 
   isPadded: boolean = true; 
@@ -39,6 +40,7 @@ isCompleted: boolean = false;
 isDeleted: boolean =  false;
 
 classList: Object = {
+marginTB: this.isMarginTB,  
 pink: this.isPink,
 round: this.isRounded,
 padding: this.isPadded,

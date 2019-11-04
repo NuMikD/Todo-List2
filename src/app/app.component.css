@@ -1,8 +1,19 @@
+/* *{
+    border: 1px solid blue;
+} */
+body{
+    display: flex;
+}
+
 form {
     width: 40%;
     margin: auto;
     background-color: white;
     border-radius: 2px;
+}
+
+.marginTB {
+    margin: 0em 0 .5em;
 }
 
 .rounded {
@@ -18,12 +29,21 @@ form {
     background-color: white;
 }
 
+#deleteBtn{
+    background-color: transparent;
+    border: none;
+}
+
 .padded {
     padding: 2%;
 }
 
 .widths {
     width: 100%;
+}
+
+.widthsInputs {
+    width: 95%;
 }
 
 .flexing {

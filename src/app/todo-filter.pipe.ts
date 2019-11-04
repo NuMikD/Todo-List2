@@ -6,7 +6,7 @@ name: 'taskFilter'
 })
 
 export class TaskFilterPipe implements PipeTransform{
-transform(taskList: Task[], searchTask: string): Task[]{
+transform(taskList: Task[] , searchTask: string): Task[]{
     if(!taskList || !searchTask){
       return taskList;
     }

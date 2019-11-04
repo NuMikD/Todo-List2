@@ -1,30 +1,31 @@
 <body>
   <form [ngClass]="{rounded: isRounded, padded: isPadded, flexing: isflexElem}">
     <h1>
-      {{ title }}!
+      {{ title }}
     </h1>
-    <h4>A place to store the things you have to do!</h4>
+    <h4 style="margin:0px;">A place to store the things you have to do!</h4>
     <p>
-      <input name="filter" type="text" placeholder="Filter your to-dos" [(ngModel)]="searchTask" (input)='filter(searchTask)' [ngClass]="{rounded: isRounded, padded: isPadded, widths: isWidths, flexing: isflexElem}" />
+      <input name="filter" type="text" placeholder="Filter your to-dos" [(ngModel)]="searchTask" (input)='filter(searchTask)' [ngClass]="{rounded: isRounded, padded: isPadded, widthsInputs: isWidths, flexing: isflexElem}" />
     </p>
     <div id="listTasks" style="list-style: none;">
-      <div name="entireList"  id="li-Item" *ngFor="let thing of filteredTask; let i = index" [ngClass]="{flexrow: isflexRow}" style="display: inline-flex; margin: 3px 0px;" >
-        <div style="width: 1em; text-align: center;" [ngClass]="{widths: isWidths}"> {{i + 1}} </div>
+      <div name="entireList"  id="li-Item" *ngFor="let thing of filteredTask; let i = index" [ngClass]="{flexrow: isflexRow, marginTB: isMarginTB}"  >
+        <div style="width: 1.5em; text-align: center;" > {{i + 1}} </div>
         <div style="display: inline-block;">
           <button name="completeBtn" (click)="completeTask(i)" *ngIf="!thing.completed" style="width: 5em;"  [ngClass]="{pink: isPink, rounded: isRounded, padded: isPadded}">Complete</button>
         </div>
-        <div name="indivTask" [ngClass]="{strike:thing.completed}" (click)='undoComplete(i)' style="width: 18em; padding-left: 1%;"> 
+        <div name="indivTask" [ngClass]="{strike:thing.completed}" (click)='undoComplete(i)' style="width: 25em;"> 
           {{ thing.item }} 
         </div>
         <div>
-          <button  (click)="delListItem(i)" style="background-color: white; border: none;">
-            <i class="glyphicon glyphicon-remove"></i>
+          <button id="deleteBtn"  (click)="delListItem(i)" style="width: 1em;"  [ngClass]="{black: isBlack, rounded: isRounded, padded: isPadded}">
+            <!-- <i class="glyphicon glyphicon-remove"></i> -->
+            <i class="fas fa-trash-alt"></i>
           </button>
         </div>
       </div>
     </div>
     <p style="margin-top: 3%;" >
-      <input name="addTodo" type="text" placeholder="Add your to-dos" [(ngModel)]="taskInput" [ngClass]="{rounded: isRounded, padded: isPadded, widths: isWidths, flexing: isflexElem}" />
+      <input name="addTodo" type="text" placeholder="Add your to-dos" [(ngModel)]="taskInput" [ngClass]="{rounded: isRounded, padded: isPadded, widthsInputs: isWidths, flexing: isflexElem}" />
     </p>
     <p>
       <button style="background-color: deeppink; color: white; align-content: center; " [ngClass]="{rounded: isRounded, padded: isPadded, widths: isWidths, flexing: isflexElem}" (click)="addTask()">Add</button>

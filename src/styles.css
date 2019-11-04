@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 html, body {    
     background-size: cover;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
+    margin: .5em 0 0;
+
     width: 100%;   
     background-color: deeppink;
 }
